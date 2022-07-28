@@ -51,5 +51,6 @@ FROM educations e
     JOIN courses c ON c.id = e."courseId"
 WHERE role = 'ongoing' OR role = 'finished'
     GROUP BY school, courses, e.status
-    ORDER BY "studentCount" DESC ;
+    ORDER BY "studentCount" DESC 
+    LIMIT 3;
 `)
