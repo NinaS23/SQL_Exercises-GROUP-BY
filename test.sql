@@ -1,10 +1,17 @@
---- exercises 1
+--- exercise 1 
 
 query(`
 SELECT 
-    AVG(salary) AS average
-FROM jobs
-    WHERE "roleId" = 1;
+    COUNT(e."endDate") AS currentExperiences
+FROM experiences e ;
 
 `)
 
+--exercise 2
+query(`
+SELECT 
+    e."userId" AS id,
+    COUNT(e."userId") AS experiences
+FROM experiences e
+    GROUP BY e."userId"
+`)
