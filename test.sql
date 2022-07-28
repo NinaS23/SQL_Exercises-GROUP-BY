@@ -3,7 +3,7 @@
 query(`
 SELECT 
     COUNT(e."endDate") AS currentExperiences
-FROM experiences e ;
+FROM experiences e;
 
 `)
 
@@ -11,7 +11,7 @@ FROM experiences e ;
 query(`
 SELECT 
     e."userId" AS id,
-    COUNT(e."userId") AS experiences
-FROM experiences e
-    GROUP BY e."userId"
+    COUNT(e."userId") AS educations
+FROM educations e
+    GROUP BY e."userId";
 `)
