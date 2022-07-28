@@ -26,3 +26,15 @@ FROM testimonials t
     WHERE u.id=435
     GROUP BY u.name
 `)
+
+--exercise 4
+query(`
+SELECT 
+    MAX(salary) AS maximumSalary,
+    r.name AS role
+FROM  jobs j
+    JOIN role r ON r.id = j."roleId"
+    WHERE j.active = true
+    GROUP BY r.id
+    ORDER BY maximumSalary ASC;
+`)
