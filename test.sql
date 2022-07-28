@@ -24,7 +24,7 @@ SELECT
 FROM testimonials t
     JOIN users u ON u.id = t."writerId"
     WHERE u.id=435
-    GROUP BY u.name
+    GROUP BY u.id
 `)
 
 --exercise 4
@@ -38,3 +38,4 @@ FROM  jobs j
     GROUP BY r.id
     ORDER BY maximumSalary ASC;
 `)
+
